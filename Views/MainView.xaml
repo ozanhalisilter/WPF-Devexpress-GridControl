@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF_Devexpress_GridControl"
         xmlns:local1="clr-namespace:WPF_Devexpress_GridControl.ViewModel"
         xmlns:mvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
-        Title="MainView" Height="auto" Width="auto" MinHeight="450" MinWidth="800">
+        Title="MainView" Height="auto" Width="850" MinHeight="450" >
     <Window.DataContext>
         <local1:MainViewModel/>
     </Window.DataContext>

@@ -249,6 +249,7 @@ namespace WPF_Devexpress_GridControl.ViewModel
             {
                 UserListNotCollection.Clear();
             }
+            LogBlock = "";
             Collection.Refresh();
 
         }

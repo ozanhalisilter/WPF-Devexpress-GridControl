@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-Devexpress-GridControl", "WPF-Devexpress-GridControl.csproj", "{0193DA47-6FD2-4035-83C0-962F4FBC59EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0193DA47-6FD2-4035-83C0-962F4FBC59EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0193DA47-6FD2-4035-83C0-962F4FBC59EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0193DA47-6FD2-4035-83C0-962F4FBC59EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0193DA47-6FD2-4035-83C0-962F4FBC59EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4742201-7097-4983-93B0-445273A520AA}
+	EndGlobalSection
+EndGlobal

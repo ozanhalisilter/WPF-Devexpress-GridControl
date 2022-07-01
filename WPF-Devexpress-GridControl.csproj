@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0193DA47-6FD2-4035-83C0-962F4FBC59EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WPF_Devexpress_GridControl</RootNamespace>
+    <AssemblyName>WPF-Devexpress-GridControl</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.Designer.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Charts.22.1.3\lib\net452\DevExpress.Charts.Designer.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Charts.Core.22.1.3\lib\net452\DevExpress.Charts.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.CodeParser.22.1.3\lib\net452\DevExpress.CodeParser.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Data.Desktop.22.1.3\lib\net452\DevExpress.Data.Desktop.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Data.22.1.3\lib\net452\DevExpress.Data.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.DataAccess.22.1.3\lib\net452\DevExpress.DataAccess.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataVisualization.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.DataVisualization.Core.22.1.3\lib\net452\DevExpress.DataVisualization.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Diagram.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Diagram.Core.22.1.3\lib\net452\DevExpress.Diagram.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dialogs.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Win.Dialogs.Core.22.1.3\lib\net452\DevExpress.Dialogs.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Drawing.22.1.3\lib\net452\DevExpress.Drawing.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Images.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Images.22.1.3\lib\net452\DevExpress.Images.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Map.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Map.Core.22.1.3\lib\net452\DevExpress.Map.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Mvvm.22.1.3\lib\net452\DevExpress.Mvvm.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v22.1.DataModel, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Scaffolding.Core.22.1.3\lib\net452\DevExpress.Mvvm.v22.1.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v22.1.DataModel.EFCore, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Scaffolding.EFCore.22.1.3\lib\net452\DevExpress.Mvvm.v22.1.DataModel.EFCore.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v22.1.ViewModel, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Scaffolding.Core.22.1.3\lib\net452\DevExpress.Mvvm.v22.1.ViewModel.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Office.Core.22.1.3\lib\net452\DevExpress.Office.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Pdf.Core.22.1.3\lib\net452\DevExpress.Pdf.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v22.1.Drawing, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Pdf.Drawing.22.1.3\lib\net452\DevExpress.Pdf.v22.1.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.PivotGrid.Core.22.1.3\lib\net452\DevExpress.PivotGrid.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Printing.Core.22.1.3\lib\net452\DevExpress.Printing.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.RichEdit.Core.22.1.3\lib\net452\DevExpress.RichEdit.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v22.1.Export, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.RichEdit.Export.22.1.3\lib\net452\DevExpress.RichEdit.v22.1.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Sparkline.Core.22.1.3\lib\net452\DevExpress.Sparkline.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.SpellChecker.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.SpellChecker.Core.22.1.3\lib\net452\DevExpress.SpellChecker.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Spreadsheet.Core.22.1.3\lib\net452\DevExpress.Spreadsheet.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.TreeMap.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.TreeMap.Core.22.1.3\lib\net452\DevExpress.TreeMap.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Utils.22.1.3\lib\net452\DevExpress.Utils.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Accordion.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Accordion.22.1.3\lib\net452\DevExpress.Xpf.Accordion.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Carousel.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Carousel.22.1.3\lib\net452\DevExpress.Xpf.Carousel.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Charts.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Charts.22.1.3\lib\net452\DevExpress.Xpf.Charts.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.CodeView.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Reporting.22.1.3\lib\net452\DevExpress.Xpf.CodeView.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Controls.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Controls.22.1.3\lib\net452\DevExpress.Xpf.Controls.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Core.22.1.3\lib\net452\DevExpress.Xpf.Core.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v22.1.Extensions, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Core.Extensions.22.1.3\lib\net452\DevExpress.Xpf.Core.v22.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.DataAccess.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Reporting.22.1.3\lib\net452\DevExpress.Xpf.DataAccess.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Diagram.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Diagram.22.1.3\lib\net452\DevExpress.Xpf.Diagram.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Dialogs.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Dialogs.22.1.3\lib\net452\DevExpress.Xpf.Dialogs.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Docking.22.1.3\lib\net452\DevExpress.Xpf.Docking.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.DocumentViewer.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.DocumentViewer.Core.22.1.3\lib\net452\DevExpress.Xpf.DocumentViewer.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.ExpressionEditor.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.ExpressionEditor.22.1.3\lib\net452\DevExpress.Xpf.ExpressionEditor.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Gantt.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Gantt.22.1.3\lib\net452\DevExpress.Xpf.Gantt.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Gauges.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Gauges.22.1.3\lib\net452\DevExpress.Xpf.Gauges.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Grid.Core.22.1.3\lib\net452\DevExpress.Xpf.Grid.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Grid.Core.22.1.3\lib\net452\DevExpress.Xpf.Grid.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v22.1.Extensions, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Grid.Core.22.1.3\lib\net452\DevExpress.Xpf.Grid.v22.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Layout.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Docking.22.1.3\lib\net452\DevExpress.Xpf.Layout.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.LayoutControl.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.LayoutControl.22.1.3\lib\net452\DevExpress.Xpf.LayoutControl.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Map.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Map.22.1.3\lib\net452\DevExpress.Xpf.Map.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.NavBar.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.NavBar.22.1.3\lib\net452\DevExpress.Xpf.NavBar.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Office.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Office.22.1.3\lib\net452\DevExpress.Xpf.Office.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.PdfViewer.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.PdfViewer.22.1.3\lib\net452\DevExpress.Xpf.PdfViewer.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.PivotGrid.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.PivotGrid.22.1.3\lib\net452\DevExpress.Xpf.PivotGrid.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Printing.22.1.3\lib\net452\DevExpress.Xpf.Printing.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.PrismAdapters.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.PrismAdapters.22.1.3\lib\net452\DevExpress.Xpf.PrismAdapters.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.PropertyGrid.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.PropertyGrid.22.1.3\lib\net452\DevExpress.Xpf.PropertyGrid.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.ReportDesigner.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Reporting.22.1.3\lib\net452\DevExpress.Xpf.ReportDesigner.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Ribbon.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Ribbon.22.1.3\lib\net452\DevExpress.Xpf.Ribbon.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.RichEdit.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.RichEdit.22.1.3\lib\net452\DevExpress.Xpf.RichEdit.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Scheduling.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Scheduling.22.1.3\lib\net452\DevExpress.Xpf.Scheduling.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.SpellChecker.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.SpellChecker.22.1.3\lib\net452\DevExpress.Xpf.SpellChecker.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Spreadsheet.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Spreadsheet.22.1.3\lib\net452\DevExpress.Xpf.Spreadsheet.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2019Colorful.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.Themes.Office2019Colorful.22.1.3\lib\net452\DevExpress.Xpf.Themes.Office2019Colorful.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.TreeMap.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.TreeMap.22.1.3\lib\net452\DevExpress.Xpf.TreeMap.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.TypedStyles.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Wpf.TypedStyles.22.1.3\lib\net452\DevExpress.Xpf.TypedStyles.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Xpo.22.1.3\lib\net452\DevExpress.Xpo.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Win.Navigation.22.1.3\lib\net452\DevExpress.XtraBars.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Charts.22.1.3\lib\net452\DevExpress.XtraCharts.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Win.Navigation.22.1.3\lib\net452\DevExpress.XtraEditors.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Gauges.Core.22.1.3\lib\net452\DevExpress.XtraGauges.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Win.Grid.22.1.3\lib\net452\DevExpress.XtraGrid.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Win.Navigation.22.1.3\lib\net452\DevExpress.XtraLayout.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Win.Printing.22.1.3\lib\net452\DevExpress.XtraPrinting.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Reporting.Core.22.1.3\lib\net452\DevExpress.XtraReports.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Win.Scheduler.22.1.3\lib\net452\DevExpress.XtraScheduler.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Scheduler.Core.22.1.3\lib\net452\DevExpress.XtraScheduler.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v22.1.Core.Desktop, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Scheduler.CoreDesktop.22.1.3\lib\net452\DevExpress.XtraScheduler.v22.1.Core.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v22.1.Reporting, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Win.SchedulerReporting.22.1.3\lib\net452\DevExpress.XtraScheduler.v22.1.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>packages\DevExpress.Win.TreeList.22.1.3\lib\net452\DevExpress.XtraTreeList.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.19.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.19.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.29\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SQLite, Version=1.0.116.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.116.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.116.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.EF6.1.0.116.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.116.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Linq.1.0.116.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.29\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.29\lib\net452\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataBase.cs" />
+    <Compile Include="RelayCommand.cs" />
+    <Compile Include="GridUpdateService.cs" />
+    <Compile Include="TheBestObservableObject.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\PersonModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="wpf.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Page Include="Views\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\DevExpress.Reporting.Core.22.1.3\build\DevExpress.Reporting.Core.targets" Condition="Exists('packages\DevExpress.Reporting.Core.22.1.3\build\DevExpress.Reporting.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\DevExpress.Reporting.Core.22.1.3\build\DevExpress.Reporting.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\DevExpress.Reporting.Core.22.1.3\build\DevExpress.Reporting.Core.targets'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.116.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.116.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.116.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.116.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
